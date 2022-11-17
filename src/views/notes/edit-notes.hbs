@@ -1,0 +1,24 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar nota</h3>
+        </div>
+        <div class="card-body">
+            <!--hacemos una peticion put oculta para el usuario en la url-->
+            <form action="/notes/edit-note/{{note._id}}?_method=PUT" method="post">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control" placeholder="Titulo" value="{{note.title}}">
+                </div>
+                <br>
+                <div class="form-group">
+                    <textarea name="description" class="form-control">{{note.description}}</textarea>
+                </div>
+                <br>
+                <div class="form-group d-grid gap-2">
+                    <button class="btn btn-primary btn-block" type="submit">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

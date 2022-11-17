@@ -1,0 +1,30 @@
+<!--usamos la sentencia each de handlebars que es como un foreach, por
+cada error que tenga nuestro array errores en notes.js hará un alert message-->
+
+
+
+
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar nota</h3>
+        </div>
+        <div class="card-body">
+            <form action="/notes/new-note" method="POST">
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control" placeholder="Agregar" autofocus> 
+                </div>
+                <br>
+                <div class="form-group">
+                    <textarea class="form-control" name="description" placeholder="Descripción"></textarea>
+                </div>
+                <br>
+                <div class="form-group d-grid gap-2">
+                    <button class="btn btn-primary btn-block mb-3" type="submit">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
